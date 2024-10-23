@@ -1,7 +1,6 @@
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-# Load datasets
 def load_data():
     courses = pd.read_csv('courses.csv')
     users = pd.read_csv('users.csv')

@@ -2,10 +2,9 @@ import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-# Load datasets
 def load_data():
-    courses = pd.read_csv('courses.csv')  # Adjust the path as needed
-    users = pd.read_csv('users.csv')  # Adjust the path as needed
+    courses = pd.read_csv('courses.csv')  
+    users = pd.read_csv('users.csv')  
     return courses, users
 
 def preprocess_data(courses):
@@ -17,7 +16,6 @@ def vectorize_skills(courses):
     course_vectors = vectorizer.fit_transform(courses['skills'])
     return course_vectors, vectorizer
 
-# Load and preprocess courses data
 courses, users = load_data()
 courses = preprocess_data(courses)
 course_vectors, vectorizer = vectorize_skills(courses)
