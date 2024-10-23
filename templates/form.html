@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Recommendation</title>
+  </head>
+  <body>
+    <h1>Course Recommendation System</h1>
+    <form action="/recommendations/" method="post">
+      <label for="desired_skills">Enter Desired Skills (comma-separated):</label
+      ><br />
+      <input
+        type="text"
+        id="desired_skills"
+        name="desired_skills"
+        required
+      /><br /><br />
+      <input type="submit" value="Get Recommendations" />
+    </form>
+    <div id="recommendations">{{ recommendations_html | safe }}</div>
+  </body>
+</html>
